@@ -15,3 +15,4 @@
   * [🔧 Сетка в инструменте](simulation-parameters/tool-mesh.md)
 * [🚀 Особенности моделирования](features-of-the-simulation.md)
 * [⛓️ Цепочка операций раскатки колец](chain-of-the-ring-rolling-operation.md)
+
