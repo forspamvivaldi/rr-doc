@@ -5,7 +5,7 @@
 ![Geimetry for simulation](../.gitbook/assets/geometry.png)
 
 {% hint style="warning" %}
-Without Main roll, workpiece and mandrel the simulation will not start
+Без Главного вала, заготовки и оправки моделирование не начнется.
 {% endhint %}
 
 
