@@ -1,4 +1,4 @@
-# Process parameters
+# ⭕ Параметры раскатки
 
 {% tabs %}
 {% tab title="Basic" %}
@@ -14,15 +14,16 @@
 {% endtab %}
 {% endtabs %}
 
-Process parameters for ring rolling are divided on 3 tabs: _Basic_, _Stop conditions_, _Advanced_.
+Все параметры раскатки разделены на 3 вкладки:  _Основные_, _Условия остановки_, _Дополнительные_.
 
-**Basic** — without these data simulation will not start.
+**Основные** — без этих данных моделирование не начнется.
 
-**Stop conditions** — without these data simulation will not finish.
+**Условия остановки** — без этих данные моделирование не закончится.
 
-**Advanced** — for more accurate setting of the process.
+**Дополнительные** — для более тонкой настройки техпроцесса.
 
-Schema below describe the interaction between initial data.
+Схема ниже описывает взаимодействие между исходными данными.
 
 ![](../.gitbook/assets/0.-full-schema.png)
+
 
