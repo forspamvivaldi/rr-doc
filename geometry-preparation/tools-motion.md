@@ -1,10 +1,11 @@
-# 🚂 Motion of the tools
+# 🚂 Движение инструментов
 
-Rotation of the tools and workpiece during rolling:
+Вращение заготовки и инструментов во время расчета:
 
 ![Rotation of the tools](../.gitbook/assets/2.-geometry-rotation.png)
 
-Translational movement of the mandrel and axial rolls:
+Поступательное движение оправки и аксиальных валков:
 
 ![Translational motion](../.gitbook/assets/2.-geometry-translational-motion.png)
+
 
