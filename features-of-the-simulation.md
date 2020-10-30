@@ -1,21 +1,16 @@
-# Features of the simulation
+# 🚀 Особенности моделирования
 
-## Dual mesh method
+## Метод двойной сетки
+Метод двойной сетки используется для моделирования раскатки колец:
+* на основе расчетной сетки система уравнения пластического течения металла.
+* геометрическая сетка хранит термомеханические поля и форму кольца.
 
-Dual mesh method is used in the ring rolling module:
+Этот метод используется для снижения времени расчета и повышения его точности.   
 
-* on the base of the **computational mesh** the system of equations of plastic flow is calculated.
-* the **geometrical mesh** contains thermo-mechanical fields and geometry of the deformed ring.
+![Расчеткая сетка](.gitbook/assets/0.-computational-mesh.png)
 
-This method is used to make accurate results for the less calculational time.
+![Геометрическая сетка](.gitbook/assets/0.-geometrical-mesh.png)
 
-![Computational mesh](.gitbook/assets/0.-computational-mesh.png)
-
-![Geometrical mesh](.gitbook/assets/0.-geometrical-mesh.png)
-
-## Mesh in tools
-
-The tools do not rotate during simulation because they are axisymmetric. The FE mesh in the tools has got the local densification in the contact area with the ring. This approach provides a good balance between accuracy and speed of simulation. The velocity field moves through the motionless mesh and transmits the velocity to the ring.
-
-![Mesh in tool with the smaller mesh in contact zones](.gitbook/assets/0.-mesh-in-tools.png)
-
+## Сетка в инструменте
+Инструменты не вращаются во время расчета, потому что инструменты осесимметричные. Сетка в инструментах измельчена в области контакта с кольцом. Этот подход представляет хороший баланс между точностью и скоростью расчета. Поле скорости движется через неподвижную сетку и передает скорости кольцу, как будто сетка в инструменте физически вращается.  
+![Сетка в инструментах измельчена в зоне контакта](.gitbook/assets/0.-mesh-in-tools.png)
