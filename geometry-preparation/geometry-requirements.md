@@ -5,7 +5,7 @@
 * собственную ось вращения
 * и ось вращения для первой оси
 
-![Schema of 2 axes of guide rolls](../.gitbook/assets/guide-roolls-axes-2.png)
+![&#x421;&#x445;&#x435;&#x43C;&#x430; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x446;&#x435;&#x43D;&#x442;&#x440;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x445; &#x432;&#x430;&#x43B;&#x43A;&#x43E;&#x432;](../.gitbook/assets/guide-roolls-axes-2.png)
 
 {% hint style="warning" %}
 Порядок осей важен
