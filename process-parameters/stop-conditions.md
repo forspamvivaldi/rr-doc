@@ -1,38 +1,43 @@
-# Stop conditions
+# 🛑 Условия остановки
 
-![Stop conditions tab](../.gitbook/assets/2.-stop-conditions.png)
+![](../.gitbook/assets/stop-conditions-small.png)
 
-Simultaneously you may specify several conditions of the simulation stop. The calculation stops when at least one of the stop conditions is achieved.
+Одновременно можно задать несколько условий остановки. Моделирование остановится, когда выполнится одно из условий остановки.
 
-> At least one stop condition should be specified.
+{% hint style="warning" %}
+Как минимум одно условие остановки должно быть задано.
+{% endhint %}
 
-## Maximum process duration
+## Максимальная продолжительность процесса
 
-If a process time is reached a specified value, the calculation will stop.
+Моделирование остановится, когда время процесса достигнет заданной величины.
 
-## Finish outer diameter
+## Конечный внешний диаметр
 
-### Maximum diameter
+### Максимальный диаметр
 
-If a maximum diameter of the ring is reached a specified value, the calculation will stop. The maximum diameter of the ring is calculated automatically.
+Расчет остановится при достижении заданного максимального диаметра. Максимальный диаметр кольца вычисляется автоматически.
 
-### Diameter at Z level
+### Диаметр по уровню Z
 
-If a diameter of the ring on Z level is reached a specified value, the calculation will stop. QForm uses a coordinate system like in CAD system: Z coordinates in QForm the same as in the CAD system.
+Расчет остановится, когда диаметра кольца на заданном уровне Z достигнет заданной величины. QForm использует систему координат как в CAD системе: координаты Z в QForm такие же как и в CAD системе.
 
-#### Width of Z-level interval \[mm\]
+#### Ширина интервала по уровню Z \[мм\]
 
-> For example : Z-level = 100mm, Z-level interval = 20mm. QForm will find the maximum diameter in Z-level range between 90mm and 110mm.
+> Например: уровень Z = 100мм, ширина Z интервала = 20мм. QForm будет искать максимальный диаметр кольца в диапазоне Z координат от 90 до 110мм.
 
-## Finish inner diameter
+## Конечный внутренний диаметр
 
-If a inner diameter of the ring is reached a specified value, the calculation will stop. To find the inner diameter of the ring it is necessary to know the outer diameter of the ring and thickness. That is mean that it is necessary to specify where to measure the
+Расчет остановится при достижении заданного внешнего диаметра. Для нахождения внутреннего диаметра кольца необходимо знать внешний диаметр и толщину кольца. Это означает, что необходимо указать, где измерять внешний диаметр и при помощи заданий диаметра главного вала и оправки указать как будет измеряться толщина кольца.
 
 $$
-D_{\text {inner}}=D_{\text {outer}} - 2 \text{Thickness}
+D_{\text {внутренний}}=D_{\text {внещний}} - 2 \text{Толщина}
 $$
 
 ![](../.gitbook/assets/2.-stop-conditions-2.png)
 
-> An implicit reason of stopping the calculation can be the end of the ring rolling curve. When the mandrel and axial roll are reached the final point of RRC the calculation will stop.
+{% hint style="warning" %}
+Неявным условие остановки может быть завершение кривой раскатки. Когда оправка и аксиальные валки достигнут конечной точки на кривой раскатки, то расчет остановится.
+{% endhint %}
+
 
