@@ -1,98 +1,49 @@
-# Advanced
-
-![Advanced parameters tab](../.gitbook/assets/3.-advanced-1.png)
-
-
-
-## Velocity depends on load and torque
-
-**Mandrel velocity depends on load and torque \(on main roll\)** - activation of this feature allows to control the mandrel motion due to load on mandrel and torque on the main roll.
-
+🕹# Дополнительные
+![Вкладка Дополнительные](../.gitbook/assets/3.-advanced-1.png)
+## Скорость оправки зависит от усилия и момента
+Скорость оправки зависит от усилия и момента \(не главном валу\)  активация этой опции позволит добавить контроль скорости движения оправки по силе на оправке и по моменту на главном валке.
 ![](../.gitbook/assets/3.-mandrel-velocity-depends.png)
-
-To use this feature it is necessary to set the next parameters in ring rolling mill:
-
-* _Nominal mandrel load \[MN\]_
-* _Maximum mandrel load \[MN\]_
-* _Maximum mandrel velocity at nominal load \[mm/s\]_
-* _Nominal main roll torque \[kN\m\]_
-* _Maximum main roll torque \[kN\m\]_ 
-* _Maximum rotational velocity of main roll at nominal torque \[rpm\]_
-
-**Axial roll velocity depends on load and torque** - activation of this feature allows to control the vertical motion of axial roll due to load and torque on the axial roll.
-
+Для использования этой опции необходимо задать следующий параметры кольцераскаткого стана:
+* Номинальное усилие оправки \[МН\]
+* Максимальное усилие оправки \[МН\]
+* Максимальная скорость оправки при номинальном усилии \[мм/с\]
+* Номинальный крутящий момент главного вала \[кН\м\]
+* Максимальный крутящий момент главного вала \[кН\м\]
+* Максимальная скорость вращения главного вала при номинальном крутящем моменте \[об/мин\]
+Скорость аксиального валка зависит от усилия и момента — активация этой опции позволит контролировать скорость движения аксиального валка по силе и моменту.
 ![](../.gitbook/assets/3.-axial-roll-velocity-depends.png)
-
-To use this feature it is necessary to set the next parameters in ring rolling mill:
-
-* _Nominal load of axial roll \[MN\]_
-* _Maximum load of axial roll \[MN\]_
-* _Maximum axial roll velocity at nominal load \[mm/s\]_
-* _Nominal axial roll torque \[kN\m\]_ 
-* _Maximum axial roll torque \[kN\m\]_
-
+Для использования этой опции необходимо задать следующий параметры кольцераскаткого стана:
+* Номинальное усилие аксиального валка \[МН\]
+* Максимальное усилие аксиального валка \[МН\]
+* Максимальная скорость аксиального валка при номинальном усилии \[мм/с\]
+* Номинальный крутящий момент аксиального валка \[кН\м\]
+* Максимальный крутящий момент аксиального валка \[кН\м\]
 ![](../.gitbook/assets/3.-velocity-depends-on-load-and-torque.png)
+## Движение стола со скоростью мандрела
+При активации этой опции стол будет двигаться вместе с оправкой: одинаковые направление и скорость.
+## Относительная разница скоростей
+### Главного вала и аксиальных валков
+По умолчанию, программа рассчитывает скорость вращения аксиальных валков так, чтобы кольцо не отклонялось от центральной оси раскатки. Линейная скорость аксиальных валков на контакте с кольцом должна быть такой же, как и  линейная скорость главного вала в контакте с кольцом.
+Используя эту опцию возможно контролировать относительную скорость вращения главного вала и аксиальных валков.
+Для описания относительной скорость движения главного вала и аксиальных валков используется \([правило правой руки](https://en.wikipedia.org/wiki/Right-hand_rule?oldformat=true)\). Это означает, что для увеличения относительной скорость вращения аксиальных валков необходимо задать значение ниже нуля. Например, -10% \(вид сверху на геометрию\):
+![Отклонения кольца от центральной оси раскатки](../.gitbook/assets/3.-main-roll-and-axial-roll-difference.png)
 
-
-
-## Plate moves with mandrel
-
-If this feature is activated the plate will move together with mandrel: the same direction, the same velocity
-
-
-
-## The relative speed difference
-
-### Main roll and axial rolls
-
-By default, the program calculates the rotational speed of axial rolls to exclude the slipping and pushing between axial rolls and ring, i.e. linear velocities on contact are equivalent and there is no deviation of the ring relative central rolling line. Linear \(tangential\) velocity of the ring rotation corresponds to the linear \(tangential\) velocity on the main roll rotation.
-
-By using this option it is possible to control the relative speed difference between main roll and axial rolls in contact with ring.
-
-To describe the relative speed difference between main roll and axial rolls is used right coordinate system \([right hand rule](https://en.wikipedia.org/wiki/Right-hand_rule?oldformat=true)\). It means that to increase the relative speed of axial rolls it is necessary to set the value below zero. For instance, -10% \(top view on geometry\):
-
-![Deviation of the ring by means of relative speed difference between main roll and axial rolls](../.gitbook/assets/3.-main-roll-and-axial-roll-difference.png)
-
-### 
-
-### Upper and bottom axial rolls
-
-It is possible to set the relative speed difference \(speed of rotation\) between upper and bottom axial rolls. To increase the relative speed of the upper axial roll it is necessary to set the value above zero.
-
-For instance: value +10% means that rotational speed of upper axial roll will be on 10% greater than on the bottom axial roll \(cross cut of the ring in the axial gap\):
-
-![Difference in the tangential velocity by means of relative speed difference between upper and bottom axial rolls](../.gitbook/assets/3.-upper-and-bottom-axial-roll-difference.png)
-
-
-
-## Reducing/Axial gap
-
+### Верхнего и нижнего аксиальных валков
+Имеется возможность задать относительную скорость вращения между верхним и нижним аксиальными валками. Для снижения относительной скорости вращения нижнего валка необходимо значение ниже нуля.
+Например: значение +10% означает, что что скорость вращения верхнего аксиального валка будет на 10% больше, чем скорость вращения нижнего аксиального валка \(сечение кольца в осевом зазоре\):
+![Разница в тангенциальной скорости по сечению кольца](../.gitbook/assets/3.-upper-and-bottom-axial-roll-difference.png)
+## Дожим/зазор
 ![](../.gitbook/assets/3.-reducing.-axial-gap.png)
-
-To describe the last stage of the ring rolling it is possible to use _Reducing/Axial gap_ option. Axial roll will move up on the _Gap_ value until the some distance to the final position \(_Reducing_\) of the mandrel.
-
+Для описания конечной стадии раскатки можно воспользоваться опцией Дожим/Зазор. Аксиальный валок поднимется на величину Зазора, когда оправке останется дойти до конечного положения заданную величину \(Дожима\).
 ![](../.gitbook/assets/3.-reducing.-axial-gap-2.png)
-
-
-
-## Rotation with deviation from horizontal plane
-
+## Вращение с отклонением от горизонтальной плоскости
 ![](../.gitbook/assets/3.-rotation-with-deviation-from-horizontal-plane.png)
-
-By default, this option is activated. We recommend do not deactivate this option for more relevant results. Also, the gravity force is taken into account by default.
-
-Deactivation of this option add some invisible boundary condition which will hold ring from vertical displacement \(ring can't climb with this additional stabilization\).
-
-### Rotation taking into account horizontal table
-
-Activation of this option will add invisible boundary condition on ring.
-
-To use this option it is necessary to specify:
-
-* Z level of table surface. QForm uses a coordinate system like in CAD system: Z coordinates in QForm the same as in the CAD system.
-* lubricant. Friction between ring and table poorly studied, so we recommend to use lubricant _Without friction_ from standard database.
-
-Also, you could use Table like a real object \(Plate in QForm interface\) for the more accurate calculation. The table should contain two halves with the web between them. Web should be in the bottom part of the table to exclude the intersection with ring. Intersection with bottom axial roll does not have an affect on simulation.
-
-![Two parts of the table with web between them](../.gitbook/assets/3.-table-with-web.png)
-
+По умолчанию, эта опция активирована. Мы рекомендуем не отключать эту опцию. Также, сила тяжести учитывается по умолчанию.
+Отключение этой опции добавит невидимое граничное условие для кольца, которое будет удерживать кольцо от вертикальных колебаний и перемещений.
+### Вращение с учетом горизонтального стола
+Активация этой опции добавит невидимое граничное условие для кольца.
+Для использования этой опции необходимо задать:
+* уровень Z поверхности стола. QForm использует координатную систему как в CAD системе: координаты Z в QForm такие же как и в CAD системе.
+* смазка. Условия трение между кольцом и столом изучено слабо, поэтому мы советуем использовать смазку Без трения из нашей стандартной базы данных.
+Также, возможно задать Стол как реальный объект \(Основание в интерфейсе QForm\)  Стол должен содержать две половинки с перемычкой между ними. Перемычка должна быть в нижней части стола, чтобы избежать пересечение с кольцом. Пересечение с нижним аксиальным валком не оказывает влияния на моделирование.
+![Две части стола с перемычкой между ними](../.gitbook/assets/3.-table-with-web.png)
